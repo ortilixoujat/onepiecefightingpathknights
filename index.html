@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,6 @@
     <meta name="author" content="KNIGHTS">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="KNIGHTS - One Piece Fighting Path">
     <meta property="og:description" content="Torneos y eventos de One Piece Fighting Path">
@@ -16,25 +15,38 @@
     
     <title>KNIGHTS | One Piece Fighting Path</title>
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Custom CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css" />
+    
     <link rel="stylesheet" href="styles.css">
     
-    <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E☕%3C/text%3E%3C/svg%3E">
+    
+    <style>
+        .select2-container { width: 100% !important; }
+        .select2-container--default .select2-selection--single { height: 50px; padding: 10px 40px 10px 15px; border: 2px solid #ddd; border-radius: 8px; background-color: #fff; font-family: 'Inter', sans-serif; font-size: 16px; }
+        .select2-container--default .select2-selection--single:focus { border-color: #28a745; outline: none; }
+        .select2-container--default .select2-selection--single .select2-selection__arrow { height: 48px; right: 10px; }
+        .select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 28px; padding-left: 0; }
+        .select2-dropdown { border: 2px solid #28a745; border-radius: 8px; overflow: hidden; }
+        .select2-results__option { padding: 12px 15px; font-family: 'Inter', sans-serif; }
+        .select2-results__option--highlighted { background-color: #28a745 !important; color: white; }
+        .select2-search--dropdown { padding: 10px; background-color: #f8f9fa; }
+        .select2-search__field { padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-family: 'Inter', sans-serif; }
+        .select2-container--default .select2-results__group { padding: 10px 15px; font-weight: 600; background-color: #f8f9fa; color: #333; }
+        [dir="rtl"] .select2-container--default .select2-selection--single { padding: 10px 15px 10px 40px; }
+        [dir="rtl"] .select2-container--default .select2-selection--single .select2-selection__arrow { right: auto; left: 10px; }
+    </style>
 </head>
 <body>
-    <!-- Language Selector -->
     <div class="language-selector">
         <button class="lang-btn" onclick="toggleLanguageMenu()">
             <i class="fas fa-globe"></i> <span id="current-lang">ES</span>
@@ -48,12 +60,10 @@
         </div>
     </div>
 
-    <!-- Telegram Floating Button -->
     <a href="https://t.me/KNIGTHSOPFP" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar por Telegram">
         <i class="fab fa-telegram"></i>
     </a>
 
-    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">KNIGHTS</a>
@@ -62,12 +72,10 @@
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-menu" id="navMenu">
-            </ul>
+            <ul class="nav-menu" id="navMenu"></ul>
         </div>
     </nav>
 
-    <!-- Hero Section with Slider -->
     <section class="hero" id="inicio">
         <div class="hero-slider">
             <div class="hero-slide active" style="background-image: url('https://p1.dailygn.com/obj/g-marketing-act-assets/2026_02_04_16_26_32/image__15__s2565927.png');"></div>
@@ -87,7 +95,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="nosotros">
         <div class="container">
             <div class="about-grid">
@@ -98,35 +105,20 @@
                 <div class="about-content">
                     <span class="section-subtitle" data-en="Nuestra Experiencia" data-ar="تجربتنا" data-zh="我们的经验" data-id="Pengalaman Kami" data-ca="La nostra experiència">Nuestra Experiencia</span>
                     <h2 class="section-title" data-en="Organizamos torneos de One Piece" data-ar="ننظم بطولات ون بيس" data-zh="我们组织海贼王锦标赛" data-id="Kami Mengorganisasi Turnamen One Piece" data-ca="Organitzem tornejos de One Piece">Organizamos torneos de One Piece</h2>
-                    <p class="about-text" data-en="En KNIGHTS organizamos torneos de One Piece Fighting Path con participantes de todo el mundo. Únete a nuestra comunidad y demuestra tus habilidades en las batallas más emocantes de los personajes de One Piece." data-ar="في نايتس نحن ن организуем بطولات ون بيس فايتينغ باث مع مشاركين من جميع أنحاء العالم. انضم إلى مجموعتنا وأظهر مهاراتك في المعارك الأكثر إثارة لشخصيات ون بيس." data-zh="在KNIGHTS，我们组织来自世界各地参赛者的海贼王战斗之路锦标赛。加入我们的社区，展示你在海贼王角色最激动人心的战斗中的技巧。" data-id="Di KNIGHTS kami mengorganisasi turnamen One Piece Fighting Path dengan peserta dari seluruh dunia. Bergabunglah dengan komunitas kami dan tunjukkan keterampilan Anda dalam pertempuran paling menarik dari karakter One Piece." data-ca="A KNIGHTS organitzem tornejos de One Piece Fighting Path amb participants de tot el món. Uneix-te a la nostra comunitat i demostra les teves habilitats en les batalles més emocionants dels personatges d'One Piece.">En KNIGHTS organizamos torneos de One Piece Fighting Path con participantes de todo el mundo. 
-                        Únete a nuestra comunidad y demuestra tus habilidades en las batallas más emocantes 
-                        de los personajes de One Piece.</p>
+                    <p class="about-text" data-en="En KNIGHTS organizamos torneos de One Piece Fighting Path con participantes de todo el mundo." data-ar="في نايتس نحن ن организуем بطولات ون بيس فايتينغ باث مع مشاركين من جميع أنحاء العالم." data-zh="在KNIGHTS，我们组织来自世界各地参赛者的海贼王战斗之路锦标赛。" data-id="Di KNIGHTS kami mengorganisasi turnamen One Piece Fighting Path dengan peserta dari seluruh dunia." data-ca="A KNIGHTS organitzem tornejos de One Piece Fighting Path amb participants de tot el món.">En KNIGHTS organizamos torneos de One Piece Fighting Path con participantes de todo el mundo.</p>
                     <div class="about-features">
                         <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-trophy"></i>
-                            </div>
+                            <div class="feature-icon"><i class="fas fa-trophy"></i></div>
                             <div class="feature-text">
                                 <h4 data-en="Campeonatos del Fighting Path" data-ar="بطولات فايتينغ باث" data-zh="战斗之路锦标赛" data-id="Kejuaraan Fighting Path" data-ca="Campionats del Fighting Path">Campeonatos del Fighting Path</h4>
-                                <p data-en="Participa en torneos internacionales y obtén recompensas exclusivas" data-ar="المشاركة في البطولات الدولية والحصول على مكافآت حصرية" data-zh="参加国际锦标赛获得独家奖励" data-id="Berpartisipasi dalam turnamen internasional dan dapatkan hadiah eksklusif" data-ca="Participa en tornejos internacionals i obtén recompenses exclusives">Participa en torneos internacionales y obtén recompensas exclusivas</p>
+                                <p data-en="Participa en torneos internacionales" data-ar="المشاركة في البطولات الدولية" data-zh="参加国际锦标赛" data-id="Berpartisipasi dalam turnamen internasional" data-ca="Participa en tornejos internacionals">Participa en torneos internacionales</p>
                             </div>
                         </div>
                         <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-cookie-bite"></i>
-                            </div>
+                            <div class="feature-icon"><i class="fas fa-cookie-bite"></i></div>
                             <div class="feature-text">
-                                <h4 data-en="Venta de cuentas del Fighting Path" data-ar="بيع حسابات فايتينغ باث" data-zh="战斗之路账号销售" data-id="Jual Akun Fighting Path" data-ca="Venda de comptes del Fighting Path">Venta de cuentas del Fighting Path</h4>
-                                <p data-en="Cuentas listas con recompensas exclusivas" data-ar="حسابات جاهزة مع مكافآت حصرية" data-zh="带有独家奖励的现成账号" data-id="Akun siap pakai dengan hadiah eksklusif" data-ca="Comptes llestes amb recompenses exclusives">Cuentas listas con recompensas exclusivas</p>
-                            </div>
-                        </div>
-                        <div class="feature-item">
-                            <div class="feature-icon">
-                                <i class="fas fa-leaf"></i>
-                            </div>
-                            <div class="feature-text">
-                                <h4 data-en="Las últimas filtraciones del juego" data-ar="أحدث تسريبات اللعبة" data-zh="最新游戏泄露" data-id=" kebocoran terbaru game" data-ca="Les última filtracions del joc">Las últimas filtraciones del juego</h4>
-                                <p data-en="en nuestro canal de Telegram" data-ar="في قناتنا على تليغرام" data-zh="在我们的Telegram频道" data-id="di saluran Telegram kami" data-ca="al nostre canal de Telegram">en nuestro canal de Telegram</p>
+                                <h4 data-en="Venta de cuentas" data-ar="بيع الحسابات" data-zh="账号销售" data-id="Jual Akun" data-ca="Venda de comptes">Venta de cuentas</h4>
+                                <p data-en="Cuentas listas con recompensas" data-ar="حسابات جاهزة مع مكافآت" data-zh="带有奖励的现成账号" data-id="Akun siap pakai dengan hadiah" data-ca="Comptes llestes amb recompenses">Cuentas listas con recompensas</p>
                             </div>
                         </div>
                     </div>
@@ -135,36 +127,19 @@
         </div>
     </section>
 
-    <!-- Menu Preview Section -->
     <section class="menu" id="menu">
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle" data-en="Nuestras Ofertas" data-ar="عروضنا" data-zh="我们的优惠" data-id="Penawaran Kami" data-ca="Les nostres ofertes">Nuestras Ofertas</span>
-                <h2 class="section-title" data-en="Lo que te proponemos" data-ar="ماذا نقترح عليك" data-zh="我们为您提供的" data-id="Yang Kami Tawarkan" data-ca="El que et proposem">Lo que te proponemos</h2>
-                <p class="section-description" data-en="Cuentas del Fighting Path a precios excelentes con descuentos incrementales" data-ar="حسابات فايتينغ باث بأسعار ممتازة مع خصومات متزايدة" data-zh="优惠价格的战斗之路账号，折扣递增" data-id="Akun Fighting Path dengan harga excellent dengan diskon bertahap" data-ca="Comptes del Fighting Path a preus excel·lents amb descomptes incrementals">Cuentas del Fighting Path a precios excelentes con descuentos incrementales</p>
+                <h2 class="section-title" data-en="Lo que te proponemos" data-ar="ماذا نقترح عليك" data-zh="我们为您提供的" data-id="Yang Kami Tawarkan" data-ca="El que et proposem">Lo que te proposons</h2>
             </div>
-            
             <div class="menu-tabs">
-                <button class="menu-tab active" data-tab="4399" style="background: #28a745; color: white;">
-                    <i class="fas fa-gamepad"></i>
-                    <span>4399</span>
-                </button>
-                <button class="menu-tab" data-tab="bilibili" style="background: #c7186a; color: white;">
-                    <i class="fas fa-gamepad"></i>
-                    <span>bilibili</span>
-                </button>
-                <button class="menu-tab" data-tab="x7game" style="background: #11b62c; color: white;">
-                    <i class="fas fa-gamepad"></i>
-                    <span>x7 game</span>
-                </button>
-                <button class="menu-tab" data-tab="iphone" style="background: #4e4b4b; color: white;">
-                    <i class="fas fa-gamepad"></i>
-                    <span>iphone</span>
-                </button>
+                <button class="menu-tab active" data-tab="4399" style="background: #28a745; color: white;"><i class="fas fa-gamepad"></i><span>4399</span></button>
+                <button class="menu-tab" data-tab="bilibili" style="background: #c7186a; color: white;"><i class="fas fa-gamepad"></i><span>bilibili</span></button>
+                <button class="menu-tab" data-tab="x7game" style="background: #11b62c; color: white;"><i class="fas fa-gamepad"></i><span>x7 game</span></button>
+                <button class="menu-tab" data-tab="iphone" style="background: #4e4b4b; color: white;"><i class="fas fa-gamepad"></i><span>iphone</span></button>
             </div>
-
             <div class="menu-content">
-                <!-- Coffee Tab -->
                 <div class="menu-panel active" id="coffee">
                     <div class="menu-grid">
                         <div class="menu-item">
@@ -174,440 +149,459 @@
                             </div>
                             <p class="menu-item-desc" data-en="Cuenta de One Piece Fighting Path" data-ar="حساب ون بيس فايتينغ باث" data-zh="海贼王战斗之路账号" data-id="Akun One Piece Fighting Path" data-ca="Compte de One Piece Fighting Path">Cuenta de One Piece Fighting Path</p>
                         </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 data-en="Próximamente" data-ar="قريباً" data-zh="即将推出" data-id="Segera Hadir" data-ca="Properament">Próximamente</h4>
-                                <span class="menu-item-price">$0.00</span>
-                            </div>
-                            <p class="menu-item-desc" data-en="Cuenta de One Piece Fighting Path" data-ar="حساب ون بيس فايتينغ باث" data-zh="海贼王战斗之路账号" data-id="Akun One Piece Fighting Path" data-ca="Compte de One Piece Fighting Path">Cuenta de One Piece Fighting Path</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4 data-en="Próximamente" data-ar="قريباً" data-zh="即将推出" data-id="Segera Hadir" data-ca="Properament">Próximamente</h4>
-                                <span class="menu-item-price">$0.00</span>
-                            </div>
-                            <p class="menu-item-desc" data-en="Cuenta de One Piece Fighting Path" data-ar="حساب ون بيس فايتينغ باث" data-zh="海贼王战斗之路账号" data-id="Akun One Piece Fighting Path" data-ca="Compte de One Piece Fighting Path">Cuenta de One Piece Fighting Path</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bollería Tab -->
-                <div class="menu-panel" id="bolleria">
-                    <div class="menu-grid">
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Croissant</h4>
-                                <span class="menu-item-price">€1.95</span>
-                            </div>
-                            <p class="menu-item-desc">Clásico francés, ligero y mantecoso</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Croissant 3 uds</h4>
-                                <span class="menu-item-price">€1.95*</span>
-                            </div>
-                            <p class="menu-item-desc">3 croissants por €1.95 cada uno - OFERTA</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Croissant de Chocolate</h4>
-                                <span class="menu-item-price">€2.40</span>
-                            </div>
-                            <p class="menu-item-desc">Relleno de chocolate negro</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Napoleón</h4>
-                                <span class="menu-item-price">€2.80</span>
-                            </div>
-                            <p class="menu-item-desc">Capas de hojaldre con crema</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Chocolate Chu</h4>
-                                <span class="menu-item-price">€2.60</span>
-                            </div>
-                            <p class="menu-item-desc">Pan dulce con chocolate</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Ensaimada</h4>
-                                <span class="menu-item-price">€2.40</span>
-                            </div>
-                            <p class="menu-item-desc">Especialidad mallorquina</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Mallorca</h4>
-                                <span class="menu-item-price">€3.20</span>
-                            </div>
-                            <p class="menu-item-desc">Ensaimada con crema</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Palmera</h4>
-                                <span class="menu-item-price">€2.20</span>
-                            </div>
-                            <p class="menu-item-desc">Palmera de chocolate</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Desayunos Tab -->
-                <div class="menu-panel" id="desayunos">
-                    <div class="menu-grid">
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Desayuno Classic</h4>
-                                <span class="menu-item-price">€5.90</span>
-                            </div>
-                            <p class="menu-item-desc">Café + croissant + zumo natural</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Desayuno Completo</h4>
-                                <span class="menu-item-price">€8.90</span>
-                            </div>
-                            <p class="menu-item-desc">Café + tortilla + croissant + zumo</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Desayuno Dulce</h4>
-                                <span class="menu-item-price">€5.50</span>
-                            </div>
-                            <p class="menu-item-desc">Café + croissants + mermelada</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Tostada con Tomate</h4>
-                                <span class="menu-item-price">€3.50</span>
-                            </div>
-                            <p class="menu-item-desc">Pan artesanal con tomate y aceite</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Tostada con Jamón</h4>
-                                <span class="menu-item-price">€5.20</span>
-                            </div>
-                            <p class="menu-item-desc">Tostada de tomate + jamón ibérico</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Tostada con Aguacate</h4>
-                                <span class="menu-item-price">€5.50</span>
-                            </div>
-                            <p class="menu-item-desc">Pan con aguacate y huevo</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Huevos Revueltos</h4>
-                                <span class="menu-item-price">€4.50</span>
-                            </div>
-                            <p class="menu-item-desc">Huevos frescos con hierbas</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Tortilla Española</h4>
-                                <span class="menu-item-price">€5.00</span>
-                            </div>
-                            <p class="menu-item-desc">Tortilla casera con patatas</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Meriendas Tab -->
-                <div class="menu-panel" id="meriendas">
-                    <div class="menu-grid">
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Merienda Tradicional</h4>
-                                <span class="menu-item-price">€4.90</span>
-                            </div>
-                            <p class="menu-item-desc">Café con leche + croissant</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Chocolate con Churros</h4>
-                                <span class="menu-item-price">€5.50</span>
-                            </div>
-                            <p class="menu-item-desc">Chocolate espeso + churros caseros</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Chocolate con Buñuelos</h4>
-                                <span class="menu-item-price">€5.50</span>
-                            </div>
-                            <p class="menu-item-desc">Chocolate + buñuelos artesanales</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Bizcocho Casero</h4>
-                                <span class="menu-item-price">€3.20</span>
-                            </div>
-                            <p class="menu-item-desc">Bizcocho casero del día</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Tarta del Día</h4>
-                                <span class="menu-item-price">€4.50</span>
-                            </div>
-                            <p class="menu-item-desc">Tarta casera variada</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Fruta Fresca</h4>
-                                <span class="menu-item-price">€3.80</span>
-                            </div>
-                            <p class="menu-item-desc">Ensalada de frutas de temporada</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Yogur con Frutas</h4>
-                                <span class="menu-item-price">€4.20</span>
-                            </div>
-                            <p class="menu-item-desc">Yogur natural con frutas frescas</p>
-                        </div>
-                        <div class="menu-item">
-                            <div class="menu-item-header">
-                                <h4>Copa de Helado</h4>
-                                <span class="menu-item-price">€3.50</span>
-                            </div>
-                            <p class="menu-item-desc">3 bolas de helado artesanal</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Tournament Registration Section -->
     <section class="tournament" id="torneo">
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle" data-en="KNIGHTS Tournament" data-ar="بطولة نايتس" data-zh="KNIGHTS锦标赛" data-id="Turnamen KNIGHTS" data-ca="Torneig KNIGHTS">KNIGHTS Tournament</span>
                 <h2 class="section-title" data-en="Regístrate en la Copa" data-ar="سجل في الكأس" data-zh="报名参加杯赛" data-id="Daftar di Copa" data-ca="Registra't a la Copa">Regístrate en la Copa</h2>
-                <p class="section-description" data-en="Únete a nuestro torneo y demuestra tus habilidades" data-ar="انضم إلى بطولتنا وأظهر مهاراتك" data-zh="加入我们的锦标赛展示你的技能" data-id="Bergabunglah dengan turnamen kami dan tunjukkan keterampilan Anda" data-ca="Uneix-te al nostre torneig i demostra les teves habilitats">Únete a nuestro torneo y demuestra tus habilidades</p>
+                <p class="section-description" data-en="Únete a nuestro torneo" data-ar="انضم إلى بطولتنا" data-zh="加入我们的锦标赛" data-id="Bergabunglah dengan turnamen kami" data-ca="Uneix-te al nostre torneig">Únete a nuestro torneo</p>
             </div>
-            
             <div class="tournament-form-container">
                 <form id="tournamentForm">
                     <div class="form-group">
-                        <label for="telegram_user">
-                            <i class="fab fa-telegram"></i> <span data-en="Tu usuario de Telegram" data-ar="اسم المستخدم في تليغرام" data-zh="您的Telegram用户名" data-id="Username Telegram Anda" data-ca="El teu usuari de Telegram">Tu usuario de Telegram</span>
-                        </label>
+                        <label for="telegram_user"><i class="fab fa-telegram"></i> <span data-en="Tu usuario de Telegram" data-ar="اسم المستخدم في تليغرام" data-zh="您的Telegram用户名" data-id="Username Telegram Anda" data-ca="El teu usuari de Telegram">Tu usuario de Telegram</span></label>
                         <input type="text" id="telegram_user" name="telegram_user" placeholder="@tu_usuario" required>
                     </div>
-                    
                     <div class="form-group">
-                        <label for="game_id">
-                            <i class="fas fa-gamepad"></i> <span data-en="Tu ID en el juego" data-ar="معرفك في اللعبة" data-zh="您在游戏中的ID" data-id="ID Game Anda" data-ca="El teu ID al joc">Tu ID en el juego</span>
-                        </label>
+                        <label for="game_id"><i class="fas fa-gamepad"></i> <span data-en="Tu ID en el juego" data-ar="معرفك في اللعبة" data-zh="您在游戏中的ID" data-id="ID Game Anda" data-ca="El teu ID al joc">Tu ID en el juego</span></label>
                         <input type="text" id="game_id" name="game_id" placeholder="Tu ID de cuenta" required>
                     </div>
-                    
                     <div class="form-group">
-                        <label for="country">
-                            <i class="fas fa-globe"></i> <span data-en="Tu país" data-ar="دولتك" data-zh="您的国家" data-id="Negara Anda" data-ca="El teu país">Tu país</span>
-                        </label>
+                        <label for="country"><i class="fas fa-globe"></i> <span data-en="Tu país" data-ar="دولتك" data-zh="您的国家" data-id="Negara Anda" data-ca="El teu país">Tu país</span></label>
                         <select name="country" id="country" required>
-                            <option value="" data-en="Selecciona tu país" data-ar="اختر دولتك" data-zh="选择您的国家" data-id="Pilih Negara Anda" data-ca="Selecciona el teu país">Selecciona tu país</option>
-                            <option value="afghanistan">Afganistán</option>
-                            <option value="albania">Albania</option>
-                            <option value="alemania">Alemania</option>
-                            <option value="andorra">Andorra</option>
-                            <option value="angola">Angola</option>
-                            <option value="argentina">Argentina</option>
-                            <option value="armenia">Armenia</option>
-                            <option value="australia">Australia</option>
-                            <option value="austria">Austria</option>
-                            <option value="azerbaiyan">Azerbaiyán</option>
-                            <option value="algerie">Algeria</option>                           
-                            <option value="bahamas">Bahamas</option>
-                            <option value="bahrein">Baréin</option>
-                            <option value="bangladesh">Bangladés</option>
-                            <option value="barbados">Barbados</option>
-                            <option value="belgica">Bélgica</option>
-                            <option value="belice">Belice</option>
-                            <option value="benin">Benín</option>
-                            <option value="bolivia">Bolivia</option>
-                            <option value="bosnia_y_herzegovina">Bosnia y Herzegovina</option>
-                            <option value="botsuana">Botsuana</option>
-                            <option value="brasil">Brasil</option>
-                            <option value="brunei">Brunéi</option>
-                            <option value="bulgaria">Bulgaria</option>
-                            <option value="cabo_verde">Cabo Verde</option>
-                            <option value="camboya">Camboya</option>
-                            <option value="camerun">Camerún</option>
-                            <option value="canada">Canadá</option>
-                            <option value="chad">Chad</option>
-                            <option value="chile">Chile</option>
-                            <option value="china">China</option>
-                            <option value="chipre">Chipre</option>
-                            <option value="colombia">Colombia</option>
-                            <option value="corea_del_norte">Corea del Norte</option>
-                            <option value="corea_del_sur">Corea del Sur</option>
-                            <option value="costa_de_marfil">Costa de Marfil</option>
-                            <option value="costa_rica">Costa Rica</option>
-                            <option value="croacia">Croacia</option>
-                            <option value="cuba">Cuba</option>
-                            <option value="dinamarca">Dinamarca</option>
-                            <option value="ecuador">Ecuador</option>
-                            <option value="egipto">Egipto</option>
-                            <option value="el_salvador">El Salvador</option>
-                            <option value="emiratos_arabes_unidos">Emiratos Árabes Unidos</option>
-                            <option value="eslovaquia">Eslovaquia</option>
-                            <option value="eslovenia">Eslovenia</option>
-                            <option value="espana">España</option>
-                            <option value="estados_unidos">Estados Unidos</option>
-                            <option value="estonia">Estonia</option>
-                            <option value="etiopia">Etiopía</option>
-                            <option value="filipinas">Filipinas</option>
-                            <option value="finlandia">Finlandia</option>
-                            <option value="francia">Francia</option>
-                            <option value="gambia">Gambia</option>
-                            <option value="georgia">Georgia</option>
-                            <option value="ghana">Ghana</option>
-                            <option value="granada">Granada</option>
-                            <option value="grecia">Grecia</option>
-                            <option value="guatemala">Guatemala</option>
-                            <option value="guinea">Guinea</option>
-                            <option value="guinea_ecuatorial">Guinea Ecuatorial</option>
-                            <option value="haiti">Haití</option>
-                            <option value="honduras">Honduras</option>
-                            <option value="hungria">Hungría</option>
-                            <option value="india">India</option>
-                            <option value="indonesia">Indonesia</option>
-                            <option value="irak">Irak</option>
-                            <option value="iran">Irán</option>
-                            <option value="irlanda">Irlanda</option>
-                            <option value="islandia">Islandia</option>
-                            <option value="israel">Israel</option>
-                            <option value="italia">Italia</option>
-                            <option value="jamaica">Jamaica</option>
-                            <option value="japon">Japón</option>
-                            <option value="jordania">Jordania</option>
-                            <option value="kazajistan">Kazajistán</option>
-                            <option value="kenia">Kenia</option>
-                            <option value="kirguistan">Kirguistán</option>
-                            <option value="kuwait">Kuwait</option>
-                            <option value="laos">Laos</option>
-                            <option value="lesoto">Lesoto</option>
-                            <option value="letonia">Letonia</option>
-                            <option value="libano">Líbano</option>
-                            <option value="liberia">Liberia</option>
-                            <option value="libia">Libia</option>
-                            <option value="liechtenstein">Liechtenstein</option>
-                            <option value="lituania">Lituania</option>
-                            <option value="luxemburgo">Luxemburgo</option>
-                            <option value="madagascar">Madagascar</option>
-                            <option value="malasia">Malasia</option>
-                            <option value="malawi">Malaui</option>
-                            <option value="maldivas">Maldivas</option>
-                            <option value="mali">Mali</option>
-                            <option value="malta">Malta</option>
-                            <option value="marruecos">Marruecos</option>
-                            <option value="mexico">México</option>
-                            <option value="moldavia">Moldavia</option>
-                            <option value="monaco">Mónaco</option>
-                            <option value="mongolia">Mongolia</option>
-                            <option value="montenegro">Montenegro</option>
-                            <option value="mozambique">Mozambique</option>
-                            <option value="myanmar">Myanmar</option>
-                            <option value="namibia">Namibia</option>
-                            <option value="nepal">Nepal</option>
-                            <option value="nicaragua">Nicaragua</option>
-                            <option value="niger">Níger</option>
-                            <option value="nigeria">Nigeria</option>
-                            <option value="noruega">Noruega</option>
-                            <option value="nueva_zelanda">Nueva Zelanda</option>
-                            <option value="oman">Omán</option>
-                            <option value="paises_bajos">Países Bajos</option>
-                            <option value="pakistan">Pakistán</option>
-                            <option value="panama">Panamá</option>
-                            <option value="paraguay">Paraguay</option>
-                            <option value="peru">Perú</option>
-                            <option value="polonia">Polonia</option>
-                            <option value="portugal">Portugal</option>
-                            <option value="qatar">Catar</option>
-                            <option value="reino_unido">Reino Unido</option>
-                            <option value="republica_dominicana">República Dominicana</option>
-                            <option value="republica_checa">República Checa</option>
-                            <option value="ruanda">Ruanda</option>
-                            <option value="rumania">Rumania</option>
-                            <option value="rusia">Rusia</option>
-                            <option value="senegal">Senegal</option>
-                            <option value="serbia">Serbia</option>
-                            <option value="singapur">Singapur</option>
-                            <option value="siria">Siria</option>
-                            <option value="somalia">Somalia</option>
-                            <option value="sri_lanka">Sri Lanka</option>
-                            <option value="sudafrica">Sudáfrica</option>
-                            <option value="sudan">Sudán</option>
-                            <option value="suecia">Suecia</option>
-                            <option value="suiza">Suiza</option>
-                            <option value="tailand">Tailandia</option>
-                            <option value="taiwan">Taiwán</option>
-                            <option value="tanzania">Tanzania</option>
-                            <option value="tunez">Túnez</option>
-                            <option value="turquia">Turquía</option>
-                            <option value="ucrania">Ucran</option>
-                            <option value="uganda">Uganda</option>
-                            <option value="uruguay">Uruguay</option>
-                            <option value="uzbekistan">Uzbekistán</option>
-                            <option value="venezuela">Venezuela</option>
-                            <option value="vietnam">Vietnam</option>
-                            <option value="yemen">Yemen</option>
-                            <option value="zambia">Zambia</option>
-                            <option value="zimbabwe">Zimbabue</option>
-                            <option value="otro">Otro</option>
+                            <option value=""></option>
+                            <option value="af" data-flag="af">Afganistán</option>
+                            <option value="al" data-flag="al">Albania</option>
+                            <option value="dz" data-flag="dz">Argelia</option>
+                            <option value="ad" data-flag="ad">Andorra</option>
+                            <option value="ao" data-flag="ao">Angola</option>
+                            <option value="ag" data-flag="ag">Antigua y Barbuda</option>
+                            <option value="sa" data-flag="sa">Arabia Saudita</option>
+                            <option value="ar" data-flag="ar">Argentina</option>
+                            <option value="am" data-flag="am">Armenia</option>
+                            <option value="au" data-flag="au">Australia</option>
+                            <option value="at" data-flag="at">Austria</option>
+                            <option value="az" data-flag="az">Azerbaiyán</option>
+                            <option value="bs" data-flag="bs">Bahamas</option>
+                            <option value="bh" data-flag="bh">Baréin</option>
+                            <option value="bd" data-flag="bd">Bangladés</option>
+                            <option value="bb" data-flag="bb">Barbados</option>
+                            <option value="be" data-flag="be">Bélgica</option>
+                            <option value="bz" data-flag="bz">Belice</option>
+                            <option value="bj" data-flag="bj">Benín</option>
+                            <option value="by" data-flag="by">Bielorrusia</option>
+                            <option value="mm" data-flag="mm">Birmania</option>
+                            <option value="bo" data-flag="bo">Bolivia</option>
+                            <option value="ba" data-flag="ba">Bosnia y Herzegovina</option>
+                            <option value="bw" data-flag="bw">Botsuana</option>
+                            <option value="br" data-flag="br">Brasil</option>
+                            <option value="bn" data-flag="bn">Brunéi</option>
+                            <option value="bg" data-flag="bg">Bulgaria</option>
+                            <option value="bf" data-flag="bf">Burkina Faso</option>
+                            <option value="bi" data-flag="bi">Burundi</option>
+                            <option value="bt" data-flag="bt">Bután</option>
+                            <option value="cv" data-flag="cv">Cabo Verde</option>
+                            <option value="kh" data-flag="kh">Camboya</option>
+                            <option value="cm" data-flag="cm">Camerún</option>
+                            <option value="ca" data-flag="ca">Canadá</option>
+                            <option value="qa" data-flag="qa">Catar</option>
+                            <option value="td" data-flag="td">Chad</option>
+                            <option value="cl" data-flag="cl">Chile</option>
+                            <option value="cn" data-flag="cn">China</option>
+                            <option value="cy" data-flag="cy">Chipre</option>
+                            <option value="co" data-flag="co">Colombia</option>
+                            <option value="km" data-flag="km">Comoras</option>
+                            <option value="kp" data-flag="kp">Corea del Norte</option>
+                            <option value="kr" data-flag="kr">Corea del Sur</option>
+                            <option value="ci" data-flag="ci">Costa de Marfil</option>
+                            <option value="cr" data-flag="cr">Costa Rica</option>
+                            <option value="hr" data-flag="hr">Croacia</option>
+                            <option value="cu" data-flag="cu">Cuba</option>
+                            <option value="dk" data-flag="dk">Dinamarca</option>
+                            <option value="dm" data-flag="dm">Dominica</option>
+                            <option value="ec" data-flag="ec">Ecuador</option>
+                            <option value="eg" data-flag="eg">Egipto</option>
+                            <option value="sv" data-flag="sv">El Salvador</option>
+                            <option value="ae" data-flag="ae">Emiratos Árabes Unidos</option>
+                            <option value="sk" data-flag="sk">Eslovaquia</option>
+                            <option value="si" data-flag="si">Eslovenia</option>
+                            <option value="es" data-flag="es">España</option>
+                            <option value="us" data-flag="us">Estados Unidos</option>
+                            <option value="ee" data-flag="ee">Estonia</option>
+                            <option value="et" data-flag="et">Etiopía</option>
+                            <option value="ph" data-flag="ph">Filipinas</option>
+                            <option value="fi" data-flag="fi">Finlandia</option>
+                            <option value="fr" data-flag="fr">Francia</option>
+                            <option value="ga" data-flag="ga">Gabón</option>
+                            <option value="gm" data-flag="gm">Gambia</option>
+                            <option value="ge" data-flag="ge">Georgia</option>
+                            <option value="gh" data-flag="gh">Ghana</option>
+                            <option value="gd" data-flag="gd">Granada</option>
+                            <option value="gr" data-flag="gr">Grecia</option>
+                            <option value="gt" data-flag="gt">Guatemala</option>
+                            <option value="gn" data-flag="gn">Guinea</option>
+                            <option value="gq" data-flag="gq">Guinea Ecuatorial</option>
+                            <option value="gy" data-flag="gy">Guyana</option>
+                            <option value="ht" data-flag="ht">Haití</option>
+                            <option value="hn" data-flag="hn">Honduras</option>
+                            <option value="hu" data-flag="hu">Hungría</option>
+                            <option value="in" data-flag="in">India</option>
+                            <option value="id" data-flag="id">Indonesia</option>
+                            <option value="ir" data-flag="ir">Irán</option>
+                            <option value="iq" data-flag="iq">Irak</option>
+                            <option value="ie" data-flag="ie">Irlanda</option>
+                            <option value="is" data-flag="is">Islandia</option>
+                            <option value="il" data-flag="il">Israel</option>
+                            <option value="it" data-flag="it">Italia</option>
+                            <option value="jm" data-flag="jm">Jamaica</option>
+                            <option value="jp" data-flag="jp">Japón</option>
+                            <option value="jo" data-flag="jo">Jordania</option>
+                            <option value="kz" data-flag="kz">Kazajistán</option>
+                            <option value="ke" data-flag="ke">Kenia</option>
+                            <option value="kg" data-flag="kg">Kirguistán</option>
+                            <option value="kw" data-flag="kw">Kuwait</option>
+                            <option value="la" data-flag="la">Laos</option>
+                            <option value="ls" data-flag="ls">Lesoto</option>
+                            <option value="lv" data-flag="lv">Letonia</option>
+                            <option value="lb" data-flag="lb">Líbano</option>
+                            <option value="lr" data-flag="lr">Liberia</option>
+                            <option value="ly" data-flag="ly">Libia</option>
+                            <option value="li" data-flag="li">Liechtenstein</option>
+                            <option value="lt" data-flag="lt">Lituania</option>
+                            <option value="lu" data-flag="lu">Luxemburgo</option>
+                            <option value="mk" data-flag="mk">Macedonia del Norte</option>
+                            <option value="mg" data-flag="mg">Madagascar</option>
+                            <option value="my" data-flag="my">Malasia</option>
+                            <option value="mw" data-flag="mw">Malaui</option>
+                            <option value="mv" data-flag="mv">Maldivas</option>
+                            <option value="ml" data-flag="ml">Mali</option>
+                            <option value="mt" data-flag="mt">Malta</option>
+                            <option value="ma" data-flag="ma">Marruecos</option>
+                            <option value="mx" data-flag="mx">México</option>
+                            <option value="md" data-flag="md">Moldavia</option>
+                            <option value="mc" data-flag="mc">Mónaco</option>
+                            <option value="mn" data-flag="mn">Mongolia</option>
+                            <option value="me" data-flag="me">Montenegro</option>
+                            <option value="mz" data-flag="mz">Mozambique</option>
+                            <option value="na" data-flag="na">Namibia</option>
+                            <option value="np" data-flag="np">Nepal</option>
+                            <option value="ni" data-flag="ni">Nicaragua</option>
+                            <option value="ne" data-flag="ne">Níger</option>
+                            <option value="ng" data-flag="ng">Nigeria</option>
+                            <option value="no" data-flag="no">Noruega</option>
+                            <option value="nz" data-flag="nz">Nueva Zelanda</option>
+                            <option value="om" data-flag="om">Omán</option>
+                            <option value="nl" data-flag="nl">Países Bajos</option>
+                            <option value="pk" data-flag="pk">Pakistán</option>
+                            <option value="pa" data-flag="pa">Panamá</option>
+                            <option value="py" data-flag="py">Paraguay</option>
+                            <option value="pe" data-flag="pe">Perú</option>
+                            <option value="pl" data-flag="pl">Polonia</option>
+                            <option value="pt" data-flag="pt">Portugal</option>
+                            <option value="gb" data-flag="gb">Reino Unido</option>
+                            <option value="cz" data-flag="cz">República Checa</option>
+                            <option value="do" data-flag="do">República Dominicana</option>
+                            <option value="rw" data-flag="rw">Ruanda</option>
+                            <option value="ro" data-flag="ro">Rumania</option>
+                            <option value="ru" data-flag="ru">Rusia</option>
+                            <option value="sn" data-flag="sn">Senegal</option>
+                            <option value="rs" data-flag="rs">Serbia</option>
+                            <option value="sg" data-flag="sg">Singapur</option>
+                            <option value="sy" data-flag="sy">Siria</option>
+                            <option value="so" data-flag="so">Somalia</option>
+                            <option value="lk" data-flag="lk">Sri Lanka</option>
+                            <option value="za" data-flag="za">Sudáfrica</option>
+                            <option value="sd" data-flag="sd">Sudán</option>
+                            <option value="se" data-flag="se">Suecia</option>
+                            <option value="ch" data-flag="ch">Suiza</option>
+                            <option value="th" data-flag="th">Tailandia</option>
+                            <option value="tz" data-flag="tz">Tanzania</option>
+                            <option value="tn" data-flag="tn">Túnez</option>
+                            <option value="tr" data-flag="tr">Turquía</option>
+                            <option value="ua" data-flag="ua">Ucranía</option>
+                            <option value="ug" data-flag="ug">Uganda</option>
+                            <option value="uy" data-flag="uy">Uruguay</option>
+                            <option value="uz" data-flag="uz">Uzbekistán</option>
+                            <option value="ve" data-flag="ve">Venezuela</option>
+                            <option value="vn" data-flag="vn">Vietnam</option>
+                            <option value="ye" data-flag="ye">Yemen</option>
+                            <option value="zm" data-flag="zm">Zambia</option>
+                            <option value="zw" data-flag="zw">Zimbabue</option>
                         </select>
                     </div>
-                    
                     <div class="form-group">
-                        <label for="favorite_character">
-                            <i class="fas fa-skull"></i> <span data-en="Personaje favorito de One Piece" data-ar="الشخصية المفضلة من ون بيس" data-zh="最喜欢的海贼王角色" data-id="Karakter Favorit One Piece" data-ca="Personatge favorit d'One Piece">Personaje favorito de One Piece</span> <span class="optional" data-en="(Opcional)" data-ar="(اختياري)" data-zh="（可选）" data-id="(Opsional)" data-ca="(Opcional)">(Opcional)</span>
-                        </label>
+                        <label for="favorite_character"><i class="fas fa-skull"></i> <span data-en="Personaje favorito de One Piece" data-ar="الشخصية المفضلة من ون بيس" data-zh="最喜欢的海贼王角色" data-id="Karakter Favorit One Piece" data-ca="Personatge favorit d'One Piece">Personaje favorito de One Piece</span> <span class="optional" data-en="(Opcional)" data-ar="(اختياري)" data-zh="（可选）" data-id="(Opsional)" data-ca="(Opcional)">(Opcional)</span></label>
                         <select id="favorite_character" name="favorite_character">
-                            <option value="" data-en="Selecciona un personaje" data-ar="اختر شخصية" data-zh="选择一个角色" data-id="Pilih Karakter" data-ca="Selecciona un personatge">Selecciona un personaje</option>
+                            <option value="">Selecciona un personaje</option>
                             <optgroup label="Piratas de Sombrero de Paja">
-                                <option value="luffy">Monkey D. Luffy</option>
-                                <option value="zoro">Roronoa Zoro</option>
-                                <option value="nami">Nami</option>
-                                <option value="usopp">Usopp</option>
-                                <option value="sanji">Sanji</option>
-                                <option value="chopper">Tony Tony Chopper</option>
-                                <option value="robin">Nico Robin</option>
-                                <option value="franky">Franky</option>
-                                <option value="brook">Brook</option>
-                                <option value="jinbe">Jinbe</option>
-                            </optgroup>
-                            <optgroup label="Los Cuatro Emperadores">
-                                <option value="shanks">Shanks</option>
-                                <option value="whitebeard">Whitebeard</option>
-                                <option value="big_mom">Big Mom</option>
-                                <option value="kaido">Kaido</option>
-                                <option value="blackbeard">Blackbeard</option>
-                            </optgroup>
-                            <optgroup label="Almirantes de la Marina">
-                                <option value="akainu">Akainu</option>
-                                <option value="aokiji">Aokiji</option>
-                                <option value="kizaru">Kizaru</option>
-                                <option value="fujitora">Fujitora</option>
-                            </optgroup>
-                            <optgroup label="Otros Personajes">
-                                <option value="ace">Portgas D. Ace</option>
-                                <option value="sabo">Sabo</option>
-                                <option value="law">Trafalgar Law</option>
-                                <option value="mihawk">Dracule Mihawk</option>
-                                <option value="doflamingo">Donquixote Doflamingo</option>
-                                <option value="hancock">Boa Hancock</option>
-                                <option value="roger">Gol D. Roger</option>
-                                <option value="traffy">Traffy</option>
-                                <option value="otro">Otro</option>
+                               <option value="luffy">Monkey D. Luffy</option>
+<option value="zoro">Roronoa Zoro</option>
+<option value="nami">Nami</option>
+<option value="usopp">Usopp</option>
+<option value="sanji">Sanji</option>
+<option value="chopper">Tony Tony Chopper</option>
+<option value="robin">Nico Robin</option>
+<option value="franky">Franky</option>
+<option value="brook">Brook</option>
+<option value="jinbe">Jinbe</option>
+<option value="shanks">Shanks</option>
+<option value="beckman">Benn Beckman</option>
+<option value="yasopp">Yasopp</option>
+<option value="luckyroo">Lucky Roux</option>
+<option value="blackbeard">Marshall D. Teach</option>
+<option value="burgess">Jesus Burgess</option>
+<option value="shiryu">Shiryu</option>
+<option value="lafitte">Lafitte</option>
+<option value="vanauger">Van Augur</option>
+<option value="catarina">Catarina Devon</option>
+<option value="pizarro">Avalo Pizarro</option>
+<option value="wolf">Sanjuan Wolf</option>
+<option value="docq">Doc Q</option>
+<option value="stronger">Stronger</option>
+<option value="whitebeard">Edward Newgate</option>
+<option value="ace">Portgas D. Ace</option>
+<option value="marco">Marco</option>
+<option value="vista">Vista</option>
+<option value="jozu">Jozu</option>
+<option value="izo">Izo</option>
+<option value="roger">Gol D. Roger</option>
+<option value="rayleigh">Silvers Rayleigh</option>
+<option value="oden">Kozuki Oden</option>
+<option value="buggy">Buggy</option>
+<option value="mihawk">Dracule Mihawk</option>
+<option value="crocodile">Crocodile</option>
+<option value="doflamingo">Donquixote Doflamingo</option>
+<option value="rosinante">Donquixote Rosinante</option>
+<option value="trebol">Trebol</option>
+<option value="diamante">Diamante</option>
+<option value="pica">Pica</option>
+<option value="vergo">Vergo</option>
+<option value="senorpink">Senor Pink</option>
+<option value="law">Trafalgar D. Water Law</option>
+<option value="bepo">Bepo</option>
+<option value="kid">Eustass Kid</option>
+<option value="killer">Killer</option>
+<option value="hawkins">Basil Hawkins</option>
+<option value="apoo">Scratchmen Apoo</option>
+<option value="drake">X Drake</option>
+<option value="bonney">Jewelry Bonney</option>
+<option value="bege">Capone Bege</option>
+<option value="urouge">Urouge</option>
+<option value="kaido">Kaido</option>
+<option value="king">King</option>
+<option value="queen">Queen</option>
+<option value="jack">Jack</option>
+<option value="yamato">Yamato</option>
+<option value="bigmom">Charlotte Linlin</option>
+<option value="katakuri">Charlotte Katakuri</option>
+<option value="smoothie">Charlotte Smoothie</option>
+<option value="cracker">Charlotte Cracker</option>
+<option value="perospero">Charlotte Perospero</option>
+<option value="brulee">Charlotte Brulee</option>
+<option value="arlong">Arlong</option>
+<option value="hody">Hody Jones</option>
+<option value="fisher">Fisher Tiger</option>
+<option value="enel">Enel</option>
+<option value="wyper">Wyper</option>
+<option value="ganfall">Gan Fall</option>
+<option value="lucci">Rob Lucci</option>
+<option value="kaku">Kaku</option>
+<option value="jabra">Jabra</option>
+<option value="blueno">Blueno</option>
+<option value="spandam">Spandam</option>
+<option value="cp0stussy">Stussy</option>
+<option value="koby">Koby</option>
+<option value="helmeppo">Helmeppo</option>
+<option value="garp">Monkey D. Garp</option>
+<option value="dragon">Monkey D. Dragon</option>
+<option value="sabo">Sabo</option>
+<option value="ivankov">Emporio Ivankov</option>
+<option value="sengoku">Sengoku</option>
+<option value="akainu">Sakazuki</option>
+<option value="aokiji">Kuzan</option>
+<option value="kizaru">Borsalino</option>
+<option value="fujitora">Issho</option>
+<option value="ryokugyu">Aramaki</option>
+<option value="smoker">Smoker</option>
+<option value="tashigi">Tashigi</option>
+<option value="magellan">Magellan</option>
+<option value="hannyabal">Hannyabal</option>
+<option value="caesar">Caesar Clown</option>
+<option value="monet">Monet</option>
+<option value="kinemon">Kin'emon</option>
+<option value="momonosuke">Kozuki Momonosuke</option>
+<option value="inurashi">Inuarashi</option>
+<option value="nekomamushi">Nekomamushi</option>
+<option value="carrot">Carrot</option>
+<option value="vivi">Nefertari Vivi</option>
+<option value="cobra">Nefertari Cobra</option>
+<option value="koza">Koza</option>
+<option value="wapol">Wapol</option>
+<option value="kureha">Dr. Kureha</option>
+<option value="hiruluk">Dr. Hiriluk</option>
+<option value="moria">Gecko Moria</option>
+<option value="perona">Perona</option>
+<option value="absalom">Absalom</option>
+<option value="bellamy">Bellamy</option>
+<option value="cavendish">Cavendish</option>
+<option value="bartolomeo">Bartolomeo</option>
+<option value="sai">Sai</option>
+<option value="hajrudin">Hajrudin</option>
+<option value="leo">Leo</option>
+<option value="rebecca">Rebecca</option>
+<option value="kyros">Kyros</option>
+<option value="viola">Viola</option>
+<option value="shirahoshi">Shirahoshi</option>
+<option value="neptune">Neptune</option>
+<option value="reiju">Vinsmoke Reiju</option>
+<option value="judge">Vinsmoke Judge</option>
+<option value="ichiji">Vinsmoke Ichiji</option>
+<option value="niji">Vinsmoke Niji</option>
+<option value="yonji">Vinsmoke Yonji</option>
+<option value="zeff">Zeff</option>
+<option value="gin">Gin</option>
+<option value="donkrieg">Don Krieg</option>
+<option value="alvida">Alvida</option>
+<option value="morgan">Axe-Hand Morgan</option>
+<option value="kuro">Captain Kuro</option>
+<option value="jango">Jango</option>
+<option value="sham">Sham</option>
+<option value="buchi">Buchi</option>
+<option value="mr1">Mr. 1</option>
+<option value="mr2">Mr. 2 Bon Clay</option>
+<option value="mr3">Mr. 3</option>
+<option value="mr4">Mr. 4</option>
+<option value="missall">Miss All Sunday</option>
+<option value="missgolden">Miss Goldenweek</option>
+<option value="missvalentine">Miss Valentine</option>
+<option value="apooally">Scratchmen Apoo (Onigashima)</option>
+<option value="ulti">Ulti</option>
+<option value="pageone">Page One</option>
+<option value="who">Who's Who</option>
+<option value="blackmaria">Black Maria</option>
+<option value="sasakii">Sasaki</option>
+<option value="otama">Tama</option>
+<option value="toko">Toko</option>
+<option value="hiyori">Kozuki Hiyori</option>
+<option value="denjiro">Denjiro</option>
+<option value="ashura">Ashura Doji</option>
+<option value="raizo">Raizo</option>
+<option value="kawamatsu">Kawamatsu</option>
+<option value="kanjuro">Kanjuro</option>
+<option value="im">Im</option>
+<option value="gorosei1">Saint Jaygarcia Saturn</option>
+<option value="vegapunk">Dr. Vegapunk</option>
+<option value="shaka">Shaka</option>
+<option value="lilith">Lilith</option>
+<option value="atlas">Atlas</option>
+<option value="york">York</option>
+<option value="bonneyfather">Bartholomew Kuma (Young)</option>
+<option value="stella">Vegapunk Stella</option>
+<option value="sentomaru">Sentomaru</option>
+<option value="pacifista">Pacifista</option>
+<option value="caribou">Caribou</option>
+<option value="coribou">Coribou</option>
+<option value="marguerite">Marguerite</option>
+<option value="gloriosa">Gloriosa</option>
+<option value="hancock">Boa Hancock</option>
+<option value="sandersonia">Boa Sandersonia</option>
+<option value="marigold">Boa Marigold</option>
+<option value="shiki">Shiki</option>
+<option value="bullet">Douglas Bullet</option>
+<option value="tesoro">Gild Tesoro</option>
+<option value="z">Zephyr</option>
+<option value="uta">Uta</option>
+<option value="ain">Ain</option>
+<option value="binz">Binz</option>
+<option value="hodyally">Dosun</option>
+<option value="daruma">Daruma</option>
+<option value="hyogoro">Hyogoro</option>
+<option value="xdrakefather">Diez Barrels</option>
+<option value="pudding">Charlotte Pudding</option>
+<option value="opera">Charlotte Opera</option>
+<option value="daifuku">Charlotte Daifuku</option>
+<option value="montdor">Charlotte Mont-d'Or</option>
+<option value="galette">Charlotte Galette</option>
+<option value="tamago">Tamago</option>
+<option value="pekoms">Pekoms</option>
+<option value="caponewife">Charlotte Chiffon</option>
+<option value="lola">Lola</option>
+<option value="mashira">Mashira</option>
+<option value="shojo">Shoujou</option>
+<option value="duval">Duval</option>
+<option value="iceburg">Iceburg</option>
+<option value="paulie">Paulie</option>
+<option value="tom">Tom</option>
+<option value="kokoro">Kokoro</option>
+<option value="chimney">Chimney</option>
+<option value="spandine">Spandine</option>
+<option value="tbone">T Bone</option>
+<option value="momonga">Momonga</option>
+<option value="doberman">Doberman</option>
+<option value="onigumo">Onigumo</option>
+<option value="tsuru">Tsuru</option>
+<option value="john">Captain John</option>
+<option value="silveraxe">Silver Axe</option>
+<option value="wangzhi">Wang Zhi</option>
+<option value="rocks">Rocks D. Xebec</option>
+<option value="stelly">Stelly</option>
+<option value="makino">Makino</option>
+<option value="woopslap">Woop Slap</option>
+<option value="dadan">Curly Dadan</option>
+<option value="sadi">Sadi</option>
+<option value="bluegilly">Blue Gilly</option>
+<option value="idel">Ideo</option>
+<option value="jeet">Jeet</option>
+<option value="abdullah">Abdullah</option>
+<option value="jeanango">Jean Ango</option>
+<option value="orlumbus">Orlumbus</option>
+<option value="elizabeth">Elizabello II</option>
+<option value="ricochet">Ricky</option>
+<option value="gatz">Gatz</option>
+<option value="baccarat">Baccarat</option>
+<option value="tanaka">Tanaka</option>
+<option value="ainmovie">Ain (Film Z)</option>
+<option value="shuzo">Shuzo</option>
+<option value="madtreasure">Mad Treasure</option>
+<option value="byrnndi">Byrnndi World</option>
+<option value="scarlett">Scarlett</option>
+<option value="sulongcarrot">Carrot (Sulong)</option>
+<option value="sulonginu">Inuarashi (Sulong)</option>
+<option value="sulongneko">Nekomamushi (Sulong)</option>
+<option value="otohime">Queen Otohime</option>
+<option value="heracles">Heracles</option>
+<option value="peruh">Pell</option>
+<option value="chaka">Chaka</option>
+<option value="gancho">Gancho</option>
+<option value="bellemere">Bell-mere</option>
+<option value="nojiiko">Nojiko</option>
+<option value="genzo">Genzo</option>
+<option value="doctorine">Doctorine</option>
+<option value="dalton">Dalton</option>
+<option value="sarquiss">Sarquiss</option>
+<option value="treasure">Mr. 5</option>
+<option value="missmonday">Miss Monday</option>
+<option value="dorry">Dorry</option>
+<option value="brogy">Brogy</option>
+<option value="oars">Oars</option>
+<option value="littleoars">Little Oars Jr.</option>
+<option value="hancockally">Boa Hancock (Amazon Lily)</option>
+<option value="vegapunksaturn">Saint Saturn</option>
+<option value="garling">Saint Figarland Garling</option>
+<option value="s-hawk">S-Hawk</option>
+<option value="s-snake">S-Snake</option>
+<option value="s-bear">S-Bear</option>
+<option value="s-shark">S-Shark</option>
+<option value="vegaforce">Vegaforce-01</option>
                             </optgroup>
                         </select>
                     </div>
-                    
                     <button type="submit" id="button" class="btn btn-primary tournament-submit">
                         <i class="fas fa-paper-plane"></i> <span data-en="Registrarse" data-ar="تسجيل" data-zh="注册" data-id="Daftar" data-ca="Registrar-se">Registrarse</span>
                     </button>
@@ -616,7 +610,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -624,7 +617,6 @@
                     <a href="#" class="footer-logo">KNIGHTS</a>
                     <p class="footer-tagline" data-en="Torneos y eventos de One Piece Fighting Path" data-ar="بطولات وأحداث ون بيس فايتينغ باث" data-zh="海贼王战斗之路锦标赛和活动" data-id="Turnamen dan Acara One Piece Fighting Path" data-ca="Tornejos i esdeveniments de One Piece Fighting Path">Torneos y eventos de One Piece Fighting Path</p>
                 </div>
-                
                 <div class="footer-links">
                     <h4 data-en="Enlaces" data-ar="روابط" data-zh="链接" data-id="Tautan" data-ca="Enllaços">Enlaces</h4>
                     <ul>
@@ -633,81 +625,74 @@
                         <li><a href="#menu" data-en="Carta" data-ar="القائمة" data-zh="菜单" data-id="Menu" data-ca="Carta">Carta</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-social">
                     <h4 data-en="Síguenos" data-ar="تابعنا" data-zh="关注我们" data-id="Ikuti Kami" data-ca="Segueix-nos">Síguenos</h4>
                     <div class="social-icons">
-                        <a href="https://t.me/KNIGTHSOPFP" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
-                            <i class="fab fa-telegram"></i>
-                        </a>
+                        <a href="https://t.me/KNIGTHSOPFP" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2024 KNIGHTS. <span data-en="Todos los derechos reservados." data-ar="جميع الحقوق محفوظة." data-zh="版权所有" data-id="Semua hak dilindungi." data-ca="Tots els drets reservats">Todos los derechos reservados.</span></p>
             </div>
         </div>
     </footer>
 
-    <!-- EmailJS Initialization -->
-    <script type="text/javascript">
-        emailjs.init('D7NAJTx-Md1TK08Xt')
-    </script>
-
-    <!-- Custom JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script type="text/javascript">emailjs.init('D7NAJTx-Md1TK08Xt')</script>
     <script src="script.js"></script>
-    
-    <!-- Form Submission Handler -->
     <script type="text/javascript">
         const btn = document.getElementById('button');
-        
-        document.getElementById('tournamentForm')
-            .addEventListener('submit', function(event) {
-                event.preventDefault();
-                
-                btn.value = 'Enviando...';
-                
-                const serviceID = 'default_service';
-                const templateID = 'template_69iv4iz';
-                
-                emailjs.sendForm(serviceID, templateID, this)
-                    .then(() => {
-                        btn.value = 'Registrarse';
-                        alert('¡Inscripción enviada con éxito!');
-                        document.getElementById('tournamentForm').reset();
-                    }, (err) => {
-                        btn.value = 'Registrarse';
-                        alert('Error al enviar: ' + JSON.stringify(err));
-                    });
+        document.getElementById('tournamentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            btn.value = 'Enviando...';
+            const serviceID = 'default_service';
+            const templateID = 'template_69iv4iz';
+            emailjs.sendForm(serviceID, templateID, this).then(() => {
+                btn.value = 'Registrarse';
+                alert('¡Inscripción enviada con éxito!');
+                document.getElementById('tournamentForm').reset();
+                $('#country').val(null).trigger('change');
+            }, (err) => {
+                btn.value = 'Registrarse';
+                alert('Error al enviar: ' + JSON.stringify(err));
             });
+        });
     </script>
-    
-    <!-- Language Switcher -->
     <script type="text/javascript">
-        function toggleLanguageMenu() {
-            document.getElementById('langMenu').classList.toggle('show');
-        }
-        
+        $(document).ready(function() {
+            $('#country').select2({
+                placeholder: 'Selecciona tu país',
+                allowClear: true,
+                width: '100%',
+                templateSelection: function(state) {
+                    if (!state.id) return state.text;
+                    var flagCode = state.element.getAttribute('data-flag');
+                    if (flagCode) return $('<span><span class="fi fi-' + flagCode + '"></span> ' + state.text + '</span>');
+                    return state.text;
+                },
+                templateResult: function(state) {
+                    if (!state.id) return state.text;
+                    var flagCode = state.element.getAttribute('data-flag');
+                    if (flagCode) return $('<span><span class="fi fi-' + flagCode + '"></span> ' + state.text + '</span>');
+                    return state.text;
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        function toggleLanguageMenu() { document.getElementById('langMenu').classList.toggle('show'); }
         function changeLanguage(lang) {
             document.getElementById('current-lang').textContent = lang.toUpperCase();
             document.getElementById('langMenu').classList.remove('show');
-            
-            document.querySelectorAll('[data-' + lang + ']').forEach(function(el) {
-                el.textContent = el.getAttribute('data-' + lang);
-            });
-            
-            document.querySelectorAll('option[data-' + lang + ']').forEach(function(el) {
-                el.textContent = el.getAttribute('data-' + lang);
-            });
+            if (lang === 'ar') { document.documentElement.setAttribute('dir', 'rtl'); document.documentElement.setAttribute('lang', 'ar'); }
+            else { document.documentElement.setAttribute('dir', 'ltr'); document.documentElement.setAttribute('lang', lang); }
+            document.querySelectorAll('[data-' + lang + ']').forEach(function(el) { el.textContent = el.getAttribute('data-' + lang); });
         }
-        
-        // Close language menu when clicking outside
         document.addEventListener('click', function(event) {
             const langSelector = document.querySelector('.language-selector');
-            if (!langSelector.contains(event.target)) {
-                document.getElementById('langMenu').classList.remove('show');
-            }
+            if (!langSelector.contains(event.target)) { document.getElementById('langMenu').classList.remove('show'); }
         });
     </script>
 </body>
