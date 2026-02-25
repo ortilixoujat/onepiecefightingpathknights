@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = Object.fromEntries(formData.entries());
             
             // Show success message (in production, you would send this to a server)
-            alert('¡Gracias por registrarte! Nos pondremos en contacto contigo en Telegram.');
+            alert('تم تسجيلك سنتواصل معك عبر تطبيق تيليجرام /Your registration is complete. We will contact you via Telegram.');
             
             // Reset form
             tournamentForm.reset();
