@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = Object.fromEntries(formData.entries());
             
             // Show success message (in production, you would send this to a server)
-            alert('تم تسجيلك سنتواصل معك عبر تطبيق تيليجرام /Your registration is complete. We will contact you via Telegram.');
+            alert('تم اكتمال عدد المشاركين في البطولة الحالية، وقد تم شغل جميع المقاعد المتاحة. وسيتم فتح باب التسجيل للبطولة القادمة قريبًا، وسيُعلن عن موعد بدء التسجيل عبر القنوات الرسمية في حينه. نشكر لكم اهتمامكم ونتطلع إلى مشاركتكم في الفعاليات القادمة');
             
             // Reset form
             tournamentForm.reset();

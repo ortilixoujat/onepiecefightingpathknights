@@ -702,6 +702,30 @@
                     return state.text;
                 }
             });
+            
+            // Initialize Select2 for favorite character with disable functionality
+            $('#favorite_character').select2({
+                placeholder: 'Selecciona un personaje',
+                allowClear: true,
+                width: '100%',
+                templateResult: function(state) {
+                    if (state.element && state.element.disabled) {
+                        return $('<span style="color: #888; font-style: italic;">' + state.text + ' (seleccionado)</span>');
+                    }
+                    return state.text;
+                }
+            });
+            
+            // When a character is selected, disable that option
+            $('#favorite_character').on('select2:select', function(e) {
+                var selectedValue = e.params.data.id;
+                if (selectedValue) {
+                    // Disable the selected option
+                    $('#favorite_character option[value="' + selectedValue + '"]').prop('disabled', true);
+                    // Refresh Select2 to apply the change
+                    $('#favorite_character').trigger('change');
+                }
+            });
         });
     </script>
     <script type="text/javascript">
